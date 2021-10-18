@@ -1,0 +1,212 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 60%;
+}
+
+
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#activeUsers{
+
+    width: 32rem;
+    height: 45rem;
+    margin-left: 2rem;
+    overflow-y: auto;
+    box-shadow: 0.2rem 0.2rem 0.9rem rgb(194, 178, 178);
+    border-radius: 2rem;
+}
+
+#activeUsers .text{
+
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+#activeUsers .usernames{
+
+    font-size: 2rem;
+    margin: 1rem 3rem;
+    color: whitesmoke;
+    background-color: #2a4c57;
+    border-radius: 1rem;
+    padding: 1rem;
+    cursor:pointer;
+}
+
+#activeUsers .usernames:hover{
+    background-color: #223a42;
+}
+
+#activeUsers .othertext{
+    font-size: 1.3rem;
+    padding: 1rem 0px;
+    color: lightcoral;
+}
+
+.chat-room{
+
+    margin-left: 2rem;
+    box-shadow: 0.2rem 0.2rem 0.9rem rgb(194, 178, 178);
+    padding: 5rem;
+    border-radius: 3rem;
+}
+
+
+#message-box{
+
+    width: 68rem;
+    padding: 1rem;
+    height: 70rem;
+    overflow-y: auto;
+    box-shadow: 0.3rem 0.3rem 0.9rem rgb(194, 178, 178);
+    border-radius: 2rem;
+}
+
+
+.write-message{
+    margin-top: 1.5rem;
+}
+
+#message{
+    margin-left: 1rem;
+    padding: 0.5rem;
+    width: 55rem;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    border-bottom: 0.2rem solid black;
+}
+
+#message:focus{
+    border-bottom: 0.3rem solid indianred;
+}
+
+#send{
+    margin-left: 1rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    background-color: indigo;
+    color: whitesmoke;
+}
+
+#send:hover{
+    background-color: rgb(106, 15, 172);
+}
+
+
+.chat-message{
+
+    background-color: rgb(196 234 245);
+    width: 35rem;
+    padding: 2rem;
+    margin: 1rem;
+    margin-top: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0.7rem 0.7rem 1rem rgb(165, 152, 152);
+}
+
+.chat-message .username{
+    font-size: 2rem;
+    color: #ed461f;
+}
+
+.chat-message .time{
+    font-size: 1.5rem;
+}
+
+.chat-message .user-message{
+    font-size: 2rem;
+}
+
+
+
+@media only screen and (max-width:1200px) {
+    
+    html{
+        font-size: 55%;
+    }
+}
+
+@media only screen and (max-width:1070px) {
+    
+    html{
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width:970px) {
+    
+    html{
+        font-size: 45%;
+    }
+}
+
+@media only screen and (max-width:880px) {
+    
+    html{
+        font-size: 40%;
+    }
+}
+
+@media only screen and (max-width:780px) {
+    
+    html{
+        font-size: 35%;
+    }
+}
+
+@media only screen and (max-width:690px) {
+    
+    html{
+        font-size: 30%;
+    }
+}
+
+@media only screen and (max-width:580px) {
+    
+    html{
+        font-size: 25%;
+    }
+}
+
+@media only screen and (max-width:490px) {
+    
+    html{
+        font-size: 20%;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    
+    html{
+        font-size: 20%;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    #activeUsers{
+        margin-bottom: 5rem;
+        width: 35rem;
+    }
+}
+
+@media only screen and (max-width:300px) {
+    
+    html{
+        font-size: 15%;
+    }
+
+}

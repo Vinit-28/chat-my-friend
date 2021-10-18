@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chatRoom.css">
+    <title>Chat Room | Open Chat</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div id="activeUsers">
+            <div class="text">Active Users</div>
+            <hr>
+            <div class="usernames">Vinit&nbsp;&#128512;</div>
+            <div class="usernames">Payal&nbsp;&#128512;</div>
+        </div>
+        
+        <div class="chat-room">
+            
+            <div id="message-box">
+                
+            </div>
+            <div class="write-message">
+                <input type="text" placeholder="Enter Your Message....." id="message">
+                <button id="send">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js" integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="chatRoom.js"></script>
+</html>
