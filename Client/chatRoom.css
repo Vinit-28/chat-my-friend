@@ -16,8 +16,8 @@
 
 #activeUsers{
 
-    width: 32rem;
-    height: 45rem;
+    width: 15%;
+    height: 40%;
     margin-left: 2rem;
     overflow-y: auto;
     box-shadow: 0.2rem 0.2rem 0.9rem rgb(194, 178, 178);
@@ -63,9 +63,9 @@
 
 #message-box{
 
-    width: 68rem;
+    width: 35vw;
+    height: 70vh;
     padding: 1rem;
-    height: 70rem;
     overflow-y: auto;
     box-shadow: 0.3rem 0.3rem 0.9rem rgb(194, 178, 178);
     border-radius: 2rem;
@@ -79,7 +79,7 @@
 #message{
     margin-left: 1rem;
     padding: 0.5rem;
-    width: 55rem;
+    width: 25vw;
     font-size: 2rem;
     border: none;
     outline: none;
@@ -108,7 +108,7 @@
 .chat-message{
 
     background-color: rgb(196 234 245);
-    width: 35rem;
+    width: 50%;
     padding: 2rem;
     margin: 1rem;
     margin-top: 3rem;
@@ -131,82 +131,112 @@
 
 
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width:1500px) {
     
-    html{
-        font-size: 55%;
+    #message-box{
+        width: 50vw;
+        height: 50vh;
+    }   
+    #activeUsers{
+        width: 25%;
+    }
+    #message{
+        width: 40vw;
+    }
+
+    @media only screen and (max-width:1000px) {
+    
+        #message-box{
+            width: 50vw;
+        }   
+        #activeUsers{
+            width: 25%;
+        }
+        #message{
+            width: 40vw;
+        }
     }
 }
 
-@media only screen and (max-width:1070px) {
-    
+
+@media only screen and (max-height:800px) {
+
     html{
         font-size: 50%;
     }
-}
+    #message-box{
+        width: 35vw;
+        height: 55vh;
+    }   
+    #activeUsers{
+        width: 20%;
+        height: 50%;
+    }
+    #message{
+        width: 30vw;
+    }
 
-@media only screen and (max-width:970px) {
-    
-    html{
-        font-size: 45%;
+    @media only screen and (max-height:600px) {
+
+        #message-box{
+            width: 30vw;
+            height: 55vh;
+        }   
+        #activeUsers{
+            width: 15%;
+            height: 50%;
+        }
+        #message{
+            width: 20vw;
+        }
     }
 }
 
-@media only screen and (max-width:880px) {
-    
-    html{
-        font-size: 40%;
-    }
-}
 
-@media only screen and (max-width:780px) {
+@media only screen and (max-width:850px) {
     
-    html{
-        font-size: 35%;
-    }
-}
-
-@media only screen and (max-width:690px) {
-    
-    html{
-        font-size: 30%;
-    }
-}
-
-@media only screen and (max-width:580px) {
-    
-    html{
-        font-size: 25%;
-    }
-}
-
-@media only screen and (max-width:490px) {
-    
-    html{
-        font-size: 20%;
-    }
-}
-
-@media only screen and (max-width:400px) {
-    
-    html{
-        font-size: 20%;
-    }
-
     .container{
         flex-direction: column;
     }
-
+    #message-box{
+        width: 50vw;
+        height: 35vh;
+    }   
     #activeUsers{
+        width: 30%;
+        height: 25%;
         margin-bottom: 5rem;
-        width: 35rem;
     }
-}
-
-@media only screen and (max-width:300px) {
-    
-    html{
-        font-size: 15%;
+    #message{
+        width: 40vw;
     }
 
+
+    @media only screen and (max-width:600px) {
+        
+        html{
+            font-size: 40%;
+        }
+        #message-box{
+            width: 60vw;
+        }   
+    }
+
+    @media only screen and (max-width:400px) {
+
+        html{
+            font-size: 30%;
+        }
+        #message-box{
+            width: 60vw;
+            height: 25vh;
+        }   
+        #activeUsers{
+            width: 45%;
+            height: 20%;
+        }
+        .chat-message{
+            width: 50%;
+        }
+    }
 }
