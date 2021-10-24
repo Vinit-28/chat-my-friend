@@ -17,14 +17,14 @@ io.on('connection', (socket)=>{
 
     // When a new user Joins the chat //
     socket.on('user-joined', (username, userface)=>{
-        socket.emit('chat-message', utilities.getMessageObject('ChatBot', '', `Hey ${userface}&nbsp;${username}, Welcome To ChatBot!!!`, 'user-joined-message'), users);
+        socket.emit('chat-message', utilities.getMessageObject('ChatBot', '', "ChatBot",`Hey ${userface}&nbsp;${username}, Welcome To ChatBot!!!`, 'user-joined-message'), users);
         users.push(utilities.getUserObject(username, userface, socket.id));
-        socket.broadcast.emit('chat-message', utilities.getMessageObject('ChatBot', '', `${userface}&nbsp;${username}, has Joined the Chat.`, 'user-joined-message'), users);
+        socket.broadcast.emit('chat-message', utilities.getMessageObject('ChatBot', '', "ChatBot", `${userface}&nbsp;${username}, has Joined the Chat.`, 'user-joined-message'), users);
     });
     
     // When a User sends a message //
     socket.on('chat-message', (message, username, userface)=>{
-        let messageObject = utilities.getMessageObject(username, userface, message, 'chat-message');
+        let messageObject = utilities.getMessageObject(username, userface, socket.id, message, 'chat-message');
         socket.broadcast.emit('chat-message', messageObject, users);
         messageObject.username = 'You';
         socket.emit('chat-message', messageObject, users);
@@ -48,7 +48,7 @@ io.on('connection', (socket)=>{
     socket.on('disconnect', ()=>{
         const userLeft = users.find(user=>user.userid == socket.id);
         users = utilities.deleteUser(users, userLeft);
-        socket.broadcast.emit('chat-message', utilities.getMessageObject('ChatBot', '', `${userLeft.userface}&nbsp;${userLeft.username}, has left the ChatRoom.`, 'user-disconnect-message'), users);
+        socket.broadcast.emit('chat-message', utilities.getMessageObject('ChatBot', '', "ChatBot", `${userLeft.userface}&nbsp;${userLeft.username}, has left the ChatRoom.`, 'user-disconnect-message'), users);
     });
 
 })

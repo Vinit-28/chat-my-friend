@@ -36,6 +36,12 @@ function outputMessage(messageObject, userList){
 
     const mssg = document.createElement('div');
     mssg.classList.add('chat-message');
+    if( messageObject.senderID == socket.id ){
+        mssg.classList.add('message-right');
+    }
+    else{
+        mssg.classList.add('message-left');
+    }
     mssg.innerHTML = `<span class="username">${messageObject.userface}&nbsp;${messageObject.username}&nbsp;</span>
     <sup class="time">${messageObject.time}</sup>
     <p class="user-message"><br>${messageObject.message}</p>`;
@@ -71,16 +77,3 @@ socket.on('typing-status-change', updateUserList);
 sendButton.addEventListener('click', readAndSendMessage);
 input.addEventListener('focusin', ()=>{socket.emit('typing');});
 input.addEventListener('focusout', ()=>{socket.emit('not-typing');});
-
-
-
-$("#message").emojioneArea({
-    pickerPostion : "right",
-    // events : {
-    //   keyup : function() {
-    //     console.log(name.innerText)
-    //     socket.emit("typing",{msg : name.innerText + " is typing...",reciver : reciver,sender : name.innerText})
-    // }
-    // }
-  });
-  

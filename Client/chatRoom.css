@@ -129,7 +129,15 @@
     font-size: 2rem;
 }
 
+.message-left{
+    float: left;
+    clear: both;
+}
 
+.message-right{
+    float: right;
+    clear: both;
+}
 
 @media only screen and (max-width:1500px) {
     

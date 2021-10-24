@@ -1,13 +1,14 @@
 const moment = require('moment');
 
-function getMessageObject(username, userface, message, objective){
+function getMessageObject(username, userface, senderID, message, objective){
 
     return {
         'username' : username,
         'userface' : userface,
         'message' : message,
         'time' : moment().format('hh:mm a'),
-        'objective' : objective
+        'objective' : objective,
+        'senderID' : senderID
     };
 }
 
