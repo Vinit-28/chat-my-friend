@@ -3,9 +3,14 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server)
 const utilities = require('./utils/utility');
+const PORT = process.env.PORT || 8000;
 
 app.use(express.static('Client'));
 let users = [];
+
+
+
+app.get('/', (req, res)=>{res.sendFile("index.html")});
 
 
 io.on('connection', (socket)=>{
@@ -48,4 +53,4 @@ io.on('connection', (socket)=>{
 
 })
 
-server.listen(8000, ()=>{console.log("http://localhost:8000");});
+server.listen(PORT, ()=>{console.log(`http://localhost:${PORT}`);});
