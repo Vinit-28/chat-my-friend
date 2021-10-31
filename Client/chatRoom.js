@@ -51,8 +51,10 @@ function outputMessage(messageObject, userList){
 }
 
 
-function readAndSendMessage(){
+function readAndSendMessage(e){
 
+    e.preventDefault();
+    
     if( input.value != "" ){
         socket.emit('chat-message', input.value, username, userface);
         input.value = "";
